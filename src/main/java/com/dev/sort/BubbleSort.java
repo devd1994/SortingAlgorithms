@@ -6,10 +6,10 @@ public class BubbleSort {
 
     public static int[] getSortedArray(int[] inputarray){
 
-        for (int outerIndex = 0; outerIndex < inputarray.length; outerIndex++) {
+        for (int outerIndex = 0; outerIndex < getLength(inputarray); outerIndex++) {
 
          boolean isSwapped=true;
-            for (int innerIndex = outerIndex+1; innerIndex < inputarray.length; innerIndex++) {
+            for (int innerIndex = outerIndex+1; innerIndex < getLength(inputarray); innerIndex++) {
 
                 if(inputarray[innerIndex]<inputarray[outerIndex]){
                     int swap=inputarray[outerIndex];
@@ -25,6 +25,10 @@ public class BubbleSort {
         }
 
         return inputarray;
+    }
+
+    private static int getLength(int[] inputarray) {
+        return inputarray.length;
     }
 
     public static void main(String[] args) {
